@@ -1,0 +1,9 @@
+<h2> Available Notes </h2>
+{% for note in notes %}
+    <p>
+        {{ note.title }} -
+        <a href="{{ note.file.url }}">Download</a>
+    </p>        
+{% empty %}
+    <p>No notes available.</p>
+{% endfor %} 
